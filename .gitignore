@@ -1,0 +1,81 @@
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Spring Boot / Maven
+# =========================
+backend/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper JAR
+# !.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# React / Vite / Node
+# =========================
+frontend/node_modules/
+node_modules/
+
+frontend/dist/
+dist/
+
+*.local
+
+# Vite environment files
+.env
+.env.*
+!.env.example
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# =========================
+# Test / coverage output
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# Spring Boot local config
+# =========================
+application-local.properties
+application-local.yml
+application-local.yaml
