@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: wisdom_rental
+      POSTGRES_USER: wisdom
+      POSTGRES_PASSWORD: wisdom
+    ports: ["5432:5432"]
+    volumes: [wisdom_rental_data:/var/lib/postgresql/data]
+  backend:
+    build: ./backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/wisdom_rental
+      SPRING_DATASOURCE_USERNAME: wisdom
+      SPRING_DATASOURCE_PASSWORD: wisdom
+    ports: ["8080:8080"]
+    depends_on: [db]
+  frontend:
+    build: ./frontend
+    ports: ["5173:80"]
+    depends_on: [backend]
+volumes:
+  wisdom_rental_data:
